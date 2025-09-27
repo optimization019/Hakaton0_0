@@ -12,6 +12,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".SubYear"
+            android:exported="false" />
+        <activity
+            android:name=".SubMonth"
+            android:exported="false" />
+        <activity
+            android:name=".Sub"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen2"
+            android:exported="false" />
+        <activity
+            android:name="Tea.TeaUlun"
+            android:exported="false" />
+        <activity
+            android:name="Tea.WhiteTea"
+            android:exported="false" />
+        <activity
+            android:name="Tea.GreenTea"
+            android:exported="false" />
+        <activity
+            android:name="Coffee.IceLatte"
+            android:exported="false" />
+        <activity
+            android:name="Coffee.Doppio"
+            android:exported="false" />
+        <activity
+            android:name="Coffee.Capuchino"
+            android:exported="false" />
+        <activity
+            android:name="Books.BookMelodrams"
+            android:exported="false" />
+        <activity
+            android:name="Books.BookRoman"
+            android:exported="false" />
+        <activity
+            android:name="Books.Books"
+            android:exported="false" />
+        <activity
             android:name=".ZabilParol"
             android:exported="false" />
         <activity
