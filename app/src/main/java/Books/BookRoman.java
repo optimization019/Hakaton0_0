@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.hakaton.LoyalCard;
+import com.example.hakaton.MAX;
 import com.example.hakaton.MainActivity;
 import com.example.hakaton.R;
 import com.example.hakaton.SplashScreen2;
@@ -58,6 +59,14 @@ public class BookRoman extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BookRoman.this, LoyalCard.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoMAX = findViewById(R.id.GoMAX);
+        GoMAX.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookRoman.this, MAX.class);
                 startActivity(intent);
             }
         });

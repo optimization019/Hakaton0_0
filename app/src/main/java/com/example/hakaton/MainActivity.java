@@ -162,6 +162,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView GoMAX = findViewById(R.id.GoMAX);
+        GoMAX.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MAX.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
         <activity
+            android:name=".MAX"
+            android:exported="false" />
+        <activity
             android:name=".AboutCard"
             android:exported="false" />
         <activity
