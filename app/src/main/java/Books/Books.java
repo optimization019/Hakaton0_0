@@ -69,5 +69,13 @@ public class Books extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView GoProfile = findViewById(R.id.GoProfile);
+        GoProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Books.this, Profile.class);
+                startActivity(intent);
+            }
+        });
     }
 }

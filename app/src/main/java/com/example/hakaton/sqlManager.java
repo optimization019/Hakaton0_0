@@ -50,6 +50,30 @@ public class sqlManager extends SQLiteOpenHelper {
         return userExists;
     }
 
+    public String getUserName(String email){
+        if(!isUserInBase(email)){
+            return "No in database";
+        }
+
+        String[] args = {email};
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM users WHERE email=?", args);
+        c.moveToFirst();
+
+        return c.getString(4);
+
+    }
+
+    public int getUserIdByEmail(String email){
+        if(!isUserInBase(email)) return -1;
+        SQLiteDatabase db = getReadableDatabase();
+        String[] args = {email};
+        Cursor c = db.rawQuery("SELECT * FROM users WHERE email=?", args);
+        c.moveToFirst();
+        //int id = c.getInt(1);
+        return c.getInt(0);
+    }
+
     public boolean getUser(String login, String pass) {
         SQLiteDatabase db = getReadableDatabase();
         String[] selectionArgs = {login, pass};

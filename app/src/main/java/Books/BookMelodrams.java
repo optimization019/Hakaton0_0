@@ -25,7 +25,7 @@ public class BookMelodrams extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_book_melodrams);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());   //код, предназначенный для скрытия tool bar'а телефона
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
@@ -33,7 +33,7 @@ public class BookMelodrams extends AppCompatActivity {
         GoBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookMelodrams.this, Books.class);
+                Intent intent = new Intent(BookMelodrams.this, Books.class);  //код для перехода между окнами
                 startActivity(intent);
             }
         });

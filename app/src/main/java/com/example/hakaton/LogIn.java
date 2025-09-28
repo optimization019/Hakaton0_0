@@ -58,14 +58,14 @@ public class LogIn extends AppCompatActivity {
             public void onClick(View view) {
                 sqlManager manager = new sqlManager(getApplicationContext());
                 if(login.getText().toString().trim().length() < 8 || password.getText().length() < 8){
-                    Toast.makeText(getApplicationContext(), "Логин или пароль слишком короткий!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Логин или пароль слишком короткий!", Toast.LENGTH_LONG).show();    //регулярное выражение для проверки логина и пароля, чтобы логин и пароль были длиннее 8 символов
                     return;
                 }
                 if(!manager.getUser(login.getText().toString().trim().toLowerCase(), password.getText().toString())){
-                    Toast.makeText(getApplicationContext(), "Не верный пароль!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Не верный пароль!", Toast.LENGTH_LONG).show();       //выводит сообщение на экран, если пользователь указал неправильный пароль
                     return;
                 }else{
-                    Toast.makeText(getApplicationContext(), "Вы вошли в свой аккаунт!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Вы вошли в свой аккаунт!", Toast.LENGTH_LONG).show(); //при правильном логине и пароле переходит на следующую страницу с выводом сообщения, что произошел успешный вход в аккаунт
                     Intent intent = new Intent(LogIn.this, MainActivity.class);
                     startActivity(intent);
                     return;
