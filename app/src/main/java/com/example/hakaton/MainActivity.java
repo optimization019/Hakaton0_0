@@ -3,11 +3,9 @@ package com.example.hakaton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,7 +16,7 @@ import Coffee.Capuchino;
 import Coffee.Doppio;
 import Coffee.IceLatte;
 import Tea.GreenTea;
-import Tea.TeaUlun;
+import Tea.TeaHunt;
 import Tea.WhiteTea;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,6 +39,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView GoDoppio1 = findViewById(R.id.imageGoDoppio1);
+        GoDoppio1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Doppio.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoIce1 = findViewById(R.id.imageGoIce1);
+        GoIce1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IceLatte.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoCap1 = findViewById(R.id.imageGoCap1);
+        GoCap1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Capuchino.class);
+                startActivity(intent);
+            }
+        });
         ImageView GoIce = findViewById(R.id.imageGoIce);
         GoIce.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,11 +79,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageView GoUlun = findViewById(R.id.imageGoUlun);
-        GoUlun.setOnClickListener(new View.OnClickListener() {
+        ImageView GoHunt = findViewById(R.id.imageGoHunt);
+        GoHunt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TeaUlun.class);
+                Intent intent = new Intent(MainActivity.this, TeaHunt.class);
                 startActivity(intent);
             }
         });
@@ -97,11 +119,35 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageView GoProfile = findViewById(R.id.imageGoProfile);
-        GoProfile.setOnClickListener(new View.OnClickListener() {
+        ImageView GoCard = findViewById(R.id.imageGoCard);
+        GoCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Profile.class);
+                Intent intent = new Intent(MainActivity.this, LoyalCard.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoWhite1 = findViewById(R.id.imageGoWhite1);
+        GoWhite1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WhiteTea.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoGreen1 = findViewById(R.id.imageGoGreen1);
+        GoGreen1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GreenTea.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoHunt1 = findViewById(R.id.imageGoHunt1);
+        GoHunt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TeaHunt.class);
                 startActivity(intent);
             }
         });

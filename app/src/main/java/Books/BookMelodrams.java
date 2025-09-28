@@ -12,6 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.hakaton.LoyalCard;
 import com.example.hakaton.MainActivity;
 import com.example.hakaton.R;
 import com.example.hakaton.SplashScreen2;
@@ -49,6 +50,14 @@ public class BookMelodrams extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BookMelodrams.this, SplashScreen2.class);
+                startActivity(intent);
+            }
+        });
+        ImageView GoCard = findViewById(R.id.imageGoCard);
+        GoCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookMelodrams.this, LoyalCard.class);
                 startActivity(intent);
             }
         });

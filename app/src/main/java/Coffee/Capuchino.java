@@ -77,11 +77,12 @@ public class Capuchino extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Button button1 = findViewById(R.id.button);
-                TextView price = findViewById(R.id.Price);
+
                 TextView text = findViewById(R.id.textView13);
                 Button button2 = findViewById(R.id.button2);
                 Button button3 = findViewById(R.id.button3);
                 text.setText("Объем 150мл");
+                TextView price = findViewById(R.id.Price);
                 price.setText("140.40");
                 button1.setBackgroundColor(Color.rgb(185, 131, 110));
                 button3.setBackgroundColor(Color.rgb(168, 168, 168));

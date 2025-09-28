@@ -9,25 +9,13 @@
     tools:context=".MainActivity">
 
 
-
-
-    <ImageView
-        android:id="@+id/imageGoProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ellipse_1" />
-
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toEndOf="@+id/imageGoProfile"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image_9" />
 
@@ -119,6 +107,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.438"
             tools:ignore="NotSibling" />
+
         <ImageView
             android:id="@+id/imageGoCap"
             android:layout_width="220dp"
@@ -129,6 +118,33 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.438"
             tools:ignore="NotSibling" />
+
+        <ImageView
+            android:id="@+id/imageGoDoppio1"
+            android:layout_width="161dp"
+            android:layout_height="119dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageGoDoppio"
+            app:layout_constraintStart_toStartOf="@+id/imageGoDoppio"
+            app:layout_constraintTop_toTopOf="@+id/imageGoDoppio"
+            app:srcCompat="@drawable/pngwing_com__8__1" />
+
+        <ImageView
+            android:id="@+id/imageGoIce1"
+            android:layout_width="174dp"
+            android:layout_height="135dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageGoIce"
+            app:layout_constraintStart_toStartOf="@+id/imageGoIce"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pngwing_com__9__1" />
+
+        <ImageView
+            android:id="@+id/imageGoCap1"
+            android:layout_width="184dp"
+            android:layout_height="138dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageGoCap"
+            app:layout_constraintStart_toEndOf="@+id/imageGoIce"
+            app:layout_constraintTop_toTopOf="@+id/imageGoCap"
+            app:srcCompat="@drawable/pngwing_com__10__1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
@@ -156,23 +172,28 @@
             android:layout_height="240dp"
             android:orientation="horizontal">
 
+
+
+
             <ImageView
-                android:id="@+id/imageGoUlun"
+                android:id="@+id/imageGoHunt"
                 android:layout_width="220dp"
                 android:layout_height="243dp"
-                android:src="@drawable/frame_36"
+                android:src="@drawable/frame_61"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/imageGoWhite"
                 android:layout_width="220dp"
                 android:layout_height="243dp"
                 android:src="@drawable/frame_33"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageGoUlun"
+                app:layout_constraintStart_toEndOf="@+id/imageGoHunt"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="NotSibling" />
+
             <ImageView
                 android:id="@+id/imageGoGreen"
                 android:layout_width="220dp"
@@ -184,6 +205,35 @@
                 app:layout_constraintVertical_bias="0.438"
                 tools:ignore="NotSibling" />
 
+            <ImageView
+                android:id="@+id/imageGoGreen1"
+                android:layout_width="172dp"
+                android:layout_height="123dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageGoGreen"
+                app:layout_constraintStart_toEndOf="@+id/imageGoWhite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pngwing_com__12_" />
+
+            <ImageView
+                android:id="@+id/imageGoHunt1"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+
+                app:layout_constraintEnd_toEndOf="@+id/imageGoHunt"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/__no_bg_preview__carve_photos__1" />
+            <ImageView
+                android:id="@+id/imageGoWhite1"
+                android:layout_width="150dp"
+                android:layout_height="136dp"
+                android:layout_marginEnd="31dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageGoWhite"
+                app:layout_constraintStart_toEndOf="@+id/imageGoHunt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pngwing_com__3__1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>

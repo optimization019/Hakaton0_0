@@ -1,4 +1,4 @@
-package Coffee;
+package Tea;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -17,13 +16,13 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.hakaton.MainActivity;
 import com.example.hakaton.R;
 
-public class Doppio extends AppCompatActivity {
+public class TeaHunt extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_doppio);
+        setContentView(R.layout.activity_tea_hunt);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
 
@@ -33,11 +32,10 @@ public class Doppio extends AppCompatActivity {
         GoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Doppio.this, MainActivity.class);
+                Intent intent = new Intent(TeaHunt.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-
         Button b1 = findViewById(R.id.button);
         Button b2 = findViewById(R.id.button2);
         Button b3 = findViewById(R.id.button3);
@@ -50,11 +48,11 @@ public class Doppio extends AppCompatActivity {
                 Button b3 = findViewById(R.id.button3);
                 TextView textField = findViewById(R.id.textView13);
                 TextView price = findViewById(R.id.Price);
-                price.setText("190.20");
+                price.setText("170.20");
                 b1.setBackgroundColor(Color.rgb(168, 168, 168));
                 b2.setBackgroundColor(Color.rgb(185, 131, 110));
                 b3.setBackgroundColor(Color.rgb(168, 168, 168));
-                textField.setText("Объём 100мл");
+                textField.setText("Объём 200мл");
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
@@ -65,11 +63,11 @@ public class Doppio extends AppCompatActivity {
                 Button b3 = findViewById(R.id.button3);
                 TextView textField = findViewById(R.id.textView13);
                 TextView price = findViewById(R.id.Price);
-                price.setText("210.20");
+                price.setText("190.20");
                 b1.setBackgroundColor(Color.rgb(168, 168, 168));
                 b2.setBackgroundColor(Color.rgb(168, 168, 168));
                 b3.setBackgroundColor(Color.rgb(185, 131, 110));
-                textField.setText("Объём 150мл");
+                textField.setText("Объём 300мл");
             }
         });
 
@@ -81,11 +79,11 @@ public class Doppio extends AppCompatActivity {
                 Button b3 = findViewById(R.id.button3);
                 TextView textField = findViewById(R.id.textView13);
                 TextView price = findViewById(R.id.Price);
-                price.setText("140.40");
+                price.setText("150.20");
                 b1.setBackgroundColor(Color.rgb(185, 131, 110));
                 b2.setBackgroundColor(Color.rgb(168, 168, 168));
                 b3.setBackgroundColor(Color.rgb(168, 168, 168));
-                textField.setText("Объём 60мл");
+                textField.setText("Объём 100мл");
             }
         });
     }

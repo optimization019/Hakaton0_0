@@ -34,8 +34,26 @@ public class SignIn extends AppCompatActivity {
         GoToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sqlManager sql = new sqlManager(getApplicationContext());
+
+                EditText login = findViewById(R.id.Vvodlogin);
+                EditText password = findViewById(R.id.Vvodparol);
+
+                if(login.getText().toString().trim().length() < 8 || password.getText().length() < 8){
+                    Toast.makeText(getApplicationContext(), "Логин или пароль слишком короткий!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if(sql.isUserInBase(login.getText().toString().trim().toLowerCase())){
+                    Toast.makeText(getApplicationContext(), "Пользователь с такой почтой уже есть в базе данных!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                sql.addUser(login.getText().toString().trim().toLowerCase(), password.getText().toString(), "", "");
+                Toast.makeText(getApplicationContext(), "Добро пожаловать!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(SignIn.this, MainActivity.class);
                 startActivity(intent);
+                return;
+                //Intent intent = new Intent(SignIn.this, MainActivity.class);
+                //startActivity(intent);
             }
         });
         TextView ZabilParol = findViewById(R.id.ZabilParol);
@@ -52,7 +70,6 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SignIn.this, LogIn.class);
                 startActivity(intent);
-                sqlManager sql = new sqlManager();
             }
         });
 

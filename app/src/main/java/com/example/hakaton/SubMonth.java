@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +30,7 @@ public class SubMonth extends AppCompatActivity {
         GoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Подписка оформлена", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(SubMonth.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -41,5 +43,6 @@ public class SubMonth extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

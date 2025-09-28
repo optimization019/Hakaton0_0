@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
         <activity
+            android:name=".AboutCard"
+            android:exported="false" />
+        <activity
+            android:name=".LoyalCard"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
@@ -27,7 +33,7 @@
             android:name=".SplashScreen2"
             android:exported="false" />
         <activity
-            android:name="Tea.TeaUlun"
+            android:name="Tea.TeaHunt"
             android:exported="false" />
         <activity
             android:name="Tea.WhiteTea"
