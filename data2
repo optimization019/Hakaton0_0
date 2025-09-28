@@ -1,0 +1,51 @@
+package com.example.registracia;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DbHelper extends SQLiteOpenHelper {
+
+    private final Context context;
+    
+    public DbHelper(Context context) {
+        super(context, "app", null, 1);
+        this.context = context;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String query = "CREATE TABLE users (id INTEGER PRIMARY KEY, login TEXT, email TEXT, pass TEXT)";
+        db.execSQL(query);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS users");
+        onCreate(db);
+    }
+
+    public void addUser(User user) {
+        ContentValues values = new ContentValues();
+        values.put("login", user.getLogin());
+        values.put("email", user.getEmail());
+        values.put("pass", user.getPass());
+        
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("users", null, values);
+        db.close();
+    }
+
+    public boolean getUser(String login, String pass) {
+        SQLiteDatabase db = getReadableDatabase();
+        String[] selectionArgs = {login, pass};
+        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE login=? AND pass=?", selectionArgs);
+        
+        boolean userExists = cursor.moveToFirst();
+        cursor.close();
+        db.close();
+        return userExists;
+    }
+}
